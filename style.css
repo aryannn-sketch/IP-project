@@ -1,0 +1,232 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0b0c0f;--panel:#121419;--panel2:#171a20;--text:#f5f5f3;--muted:#8b8e96;--line:#292c33;--accent:#e82438;--cream:#ece8dd}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.5;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.top-strip{height:30px;padding:0 5%;display:flex;justify-content:space-between;align-items:center;background:#08090b;border-bottom:1px solid #202228;color:#777b84;font:600 9px Inter;letter-spacing:1.8px}
+.navbar{height:78px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:rgba(11,12,15,.94);position:sticky;top:0;z-index:20;backdrop-filter:blur(14px)}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Barlow Condensed";font-size:22px;letter-spacing:1px}.brand b{color:var(--accent)}
+.brand-mark{width:42px;height:42px;background:var(--accent);display:grid;place-items:center;font:900 21px "Barlow Condensed";transform:skew(-10deg)}
+.navbar nav{display:flex;gap:34px;font-size:11px;font-weight:700;letter-spacing:1.3px;color:#b5b7bd}.navbar nav a{transition:.25s}.navbar nav a:hover{color:white}
+.nav-button{font:800 10px Inter;letter-spacing:1.2px;border:1px solid #3a3d44;padding:12px 17px}.nav-button span{color:var(--accent);margin-left:9px}
+.hero{min-height:680px;padding:80px 5%;position:relative;display:flex;align-items:center;justify-content:space-between;overflow:hidden;background:radial-gradient(circle at 78% 40%,#252830 0,#101217 33%,#0b0c0f 70%)}
+.hero-grid{position:absolute;inset:0;opacity:.28;background-image:linear-gradient(#2d3037 1px,transparent 1px),linear-gradient(90deg,#2d3037 1px,transparent 1px);background-size:80px 80px;mask-image:linear-gradient(90deg,black,transparent 75%)}
+.hero:after{content:"";position:absolute;width:52%;height:140%;right:-15%;top:-20%;background:linear-gradient(135deg,transparent 49%,rgba(232,36,56,.08) 50%,rgba(232,36,56,.02) 70%,transparent 71%);transform:rotate(7deg)}
+.hero-content,.hero-score{position:relative;z-index:2}.hero-content{max-width:620px}.eyebrow{font:700 10px Inter;letter-spacing:2.3px;color:#9b9da5;margin-bottom:18px}.eyebrow span,.live-label i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:8px}
+h1,h2,h3{font-family:"Barlow Condensed",Impact,sans-serif}h1{font-size:clamp(70px,10vw,150px);line-height:.78;letter-spacing:-3px;font-weight:900}h1 em,h2 em,h3 em{font-style:normal;color:var(--accent)}
+.hero-copy{max-width:480px;margin:30px 0;color:#9b9da5;font-size:14px;line-height:1.8}.hero-actions{display:flex;gap:12px}.primary-btn,.ghost-btn{padding:15px 21px;font-size:10px;font-weight:800;letter-spacing:1.4px}.primary-btn{background:var(--accent)}.primary-btn span{margin-left:25px}.ghost-btn{border:1px solid #3c3f47}
+.hero-score{width:min(410px,38%)}.live-label{font-size:9px;font-weight:800;letter-spacing:2px;margin-bottom:10px}.score-card{background:rgba(18,20,25,.92);border:1px solid #343740;padding:23px;box-shadow:0 30px 80px #0008}.competition{font-size:8px;color:#777b84;letter-spacing:1.7px;text-align:center;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.teams-score{display:flex;align-items:center;justify-content:space-between;padding:25px 4px}.hero-team{text-align:center;font-size:10px;letter-spacing:1px}.crest,.mini-crest,.large-crest,.form-logo{display:grid;place-items:center;font-family:"Barlow Condensed";font-weight:900}.crest{width:54px;height:54px;margin:auto auto 9px;border-radius:50%;font-size:22px}.score{display:flex;align-items:center;gap:8px;font-family:"Barlow Condensed"}.score strong{font-size:44px}.score span{font-size:22px;color:#555962}.score-footer{border-top:1px solid var(--line);padding-top:13px;display:flex;justify-content:space-between;font-size:8px;color:#747780;letter-spacing:1.5px}.hero-number{position:absolute;right:4%;bottom:-30px;font:900 300px "Barlow Condensed";color:#ffffff04;line-height:1}
+.red{background:#d71935}.blue{background:#0753a3}.navy{background:#142c5c}.sky{background:#6cadde;color:#07111d}.white{background:#e7e7e7;color:#15244c}.ticker{overflow:hidden;white-space:nowrap;background:var(--accent);color:#fff;height:39px;display:flex;align-items:center}.ticker-track{font:800 9px Inter;letter-spacing:2px;display:flex;gap:18px;align-items:center;animation:scroll 25s linear infinite}@keyframes scroll{to{transform:translateX(-50%)}}
+.section{padding:100px 5%;max-width:1500px;margin:auto}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:38px}.section-head h2{font-size:58px;line-height:.85;letter-spacing:-1px}.section-head>a{font-size:9px;letter-spacing:1.4px;font-weight:800;color:#999da6}.compact{margin-bottom:24px}.compact>span{font:700 9px Inter;color:#737781;letter-spacing:1.5px}
+.matchweek{border:1px solid var(--line);background:var(--panel)}.matchweek-head{height:43px;padding:0 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);font:700 9px Inter;letter-spacing:1.5px;color:#92959e}.fixture{min-height:94px;display:grid;grid-template-columns:75px 1fr 100px 1fr 170px;align-items:center;padding:0 25px;border-bottom:1px solid var(--line);position:relative}.fixture:last-child{border:0}.fixture:hover{background:#17191e}.fixture-date b{font:800 28px "Barlow Condensed";display:block}.fixture-date span{font-size:8px;color:#777b84;letter-spacing:1px}.club{font:700 13px Inter;display:flex;align-items:center;gap:12px}.club.away{justify-content:flex-end}.mini-crest{width:27px;height:27px;border-radius:50%;font-size:12px}.fixture-time{text-align:center;font:800 24px "Barlow Condensed"}.venue{text-align:right;font-size:8px;letter-spacing:1.4px;color:#6e727b}
+.split-section{display:grid;grid-template-columns:1.45fr .75fr;gap:22px}.table-panel,.form-panel{border:1px solid var(--line);background:var(--panel);padding:30px}.table-row{min-height:52px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 45px 45px 55px 55px;align-items:center;font-size:11px;color:#b5b8c0}.table-row>span:first-child{display:flex;align-items:center;gap:13px}.table-row b{width:20px;color:#6f737c;font-size:9px}.table-row strong{color:white}.table-title{min-height:35px;border-top:0;font-size:8px;letter-spacing:1.2px;color:#6f737c}.table-dot{width:7px;height:7px;border-radius:50%}.leader{background:#171a20}.form-panel{background:linear-gradient(145deg,#171a20,#101216)}.form-panel h3{font-size:42px;line-height:.9;margin-bottom:30px}.form-team{padding:16px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:43px 1fr auto;gap:13px;align-items:center}.form-logo{width:40px;height:40px;border-radius:50%}.form-team b{font-size:10px}.form-team small{display:block;font-size:7px;color:#686c74;letter-spacing:1px;margin-top:4px}.form-dots{display:flex;gap:4px}.form-dots i{font-style:normal;width:20px;height:20px;display:grid;place-items:center;background:#263d2c;color:#72bf83;font-size:7px;font-weight:800}.form-dots i:nth-child(4){background:#38382b;color:#c5b964}.form-dots i:nth-child(5){background:#3b2527;color:#e77a83}
+.dark-section{max-width:none;background:#101216;border-top:1px solid #1f2228;border-bottom:1px solid #1f2228}.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.team-card{min-height:370px;background:#17191e;border:1px solid #272a31;padding:24px;position:relative;overflow:hidden;transition:.3s}.team-card:hover{transform:translateY(-7px);border-color:#555963}.team-card.featured{background:linear-gradient(145deg,#1d2027,#14161a)}.rank{position:absolute;right:20px;top:20px;font:800 10px Inter;color:#656971}.large-crest{width:90px;height:90px;border-radius:50%;font-size:40px;margin:30px 0 70px}.team-card h3{font-size:33px;line-height:.85}.team-card p{font-size:7px;letter-spacing:1.3px;color:#6f737c;margin-top:14px}.card-line{height:1px;background:#30333a;margin-top:20px}.arrow{position:absolute;right:20px;bottom:20px;color:#888}
+.player-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.player-card{min-height:420px;background:var(--panel);border:1px solid var(--line);padding:25px;position:relative;overflow:hidden}.player-card:after{content:"";position:absolute;right:-30px;top:-40px;width:220px;height:500px;background:linear-gradient(150deg,#ffffff0a,transparent 65%);transform:skew(-15deg)}.player-number{font:900 100px "Barlow Condensed";position:absolute;right:15px;top:5px;color:#ffffff07}.player-avatar{width:115px;height:155px;background:linear-gradient(145deg,#2a2e36,#111319);border:1px solid #353941;display:grid;place-items:center;font:900 38px "Barlow Condensed";color:#626771;margin:20px 0 25px}.player-info span{font-size:7px;color:#777b84;letter-spacing:1.2px}.player-info h3{font-size:34px;line-height:.82;margin-top:9px}.player-stats{display:flex;gap:25px;margin-top:30px;border-top:1px solid var(--line);padding-top:17px}.player-stats b{font:800 27px "Barlow Condensed";display:block}.player-stats small{font-size:7px;color:#71757e;letter-spacing:1px}
+.news-section{background:#0b0c0f}.news-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px}.news-card{background:var(--panel);border:1px solid var(--line);padding:27px;min-height:260px;display:flex;flex-direction:column}.news-card.big{padding:0;display:grid;grid-template-columns:1fr 1.2fr}.news-image{min-height:100%;display:flex;align-items:flex-end;justify-content:space-between;padding:22px}.red-gradient{background:linear-gradient(135deg,#55131d,#e82438 55%,#230b10)}.news-image span{font:900 70px "Barlow Condensed";color:#fff8}.news-image b{font:900 70px "Barlow Condensed";color:#fff5}.news-copy{padding:28px;display:flex;flex-direction:column}.news-copy>span,.news-tag{font-size:8px;color:#858992;letter-spacing:1.4px;font-weight:700}.news-copy h3,.news-card>h3{font-size:26px;line-height:.95;margin:15px 0}.news-copy a,.news-card a{margin-top:auto;font-size:8px;font-weight:800;letter-spacing:1.2px;color:#b8bbc2}.news-card p{font-size:7px;color:#6f737b;letter-spacing:1.2px;margin-top:auto}.news-card:hover h3{color:#fff}
+.quote-section{padding:130px 5%;text-align:center;border-top:1px solid var(--line);background:linear-gradient(180deg,#101216,#0b0c0f)}.quote-mark{font:900 100px Georgia;color:var(--accent);height:70px}.quote-section p{font:800 clamp(32px,5vw,70px) "Barlow Condensed";line-height:.9;letter-spacing:-1px}.quote-section span{display:block;margin-top:30px;color:#676b73;font-size:8px;letter-spacing:2px}
+footer{padding:45px 5%;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;gap:20px;background:#08090b}.footer-brand{display:flex;align-items:center;gap:12px}.footer-brand strong{font:800 20px "Barlow Condensed";display:block}.footer-brand small{font-size:7px;letter-spacing:1px;color:#656971}.footer-links{display:flex;justify-content:center;gap:22px;font-size:8px;font-weight:800;letter-spacing:1px;color:#8c8f97}.footer-note{text-align:right;font-size:7px;line-height:1.7;letter-spacing:1.2px;color:#5e626a}
+
+@media(max-width:900px){
+  .navbar nav{display:none}.hero{min-height:auto;padding:75px 6% 65px;display:block}.hero-score{width:100%;max-width:500px;margin:60px auto 0}.hero-number{font-size:190px}.split-section{grid-template-columns:1fr}.team-grid{grid-template-columns:1fr 1fr}.player-grid{grid-template-columns:1fr}.news-grid{grid-template-columns:1fr 1fr}.news-card.big{grid-column:1/-1}
+}
+@media(max-width:650px){
+  .top-strip span:last-child{display:none}.navbar{height:66px;padding:0 20px}.nav-button{display:none}.section{padding:70px 20px}.section-head{align-items:flex-start;gap:15px}.section-head h2{font-size:45px}.section-head>a{padding-top:8px}.fixture{grid-template-columns:45px 1fr 70px 1fr;gap:8px;padding:15px}.fixture .venue{grid-column:2/-1;text-align:left;margin-top:5px}.fixture-time{font-size:19px}.club{font-size:10px;gap:7px}.club.away{justify-content:flex-end}.hero{padding-left:20px;padding-right:20px}.hero h1{font-size:76px}.hero-copy{font-size:12px}.hero-actions{flex-wrap:wrap}.primary-btn,.ghost-btn{width:100%;text-align:center}.score-card{padding:17px}.teams-score{padding:20px 0}.score strong{font-size:34px}.crest{width:45px;height:45px}.team-grid{grid-template-columns:1fr}.team-card{min-height:320px}.large-crest{margin-bottom:45px}.news-grid{grid-template-columns:1fr}.news-card.big{display:block}.news-image{min-height:190px}.table-panel,.form-panel{padding:20px}.table-row{grid-template-columns:1fr 30px 30px 45px 45px;font-size:9px}.player-card{min-height:390px}footer{grid-template-columns:1fr;text-align:left}.footer-links{justify-content:flex-start;flex-wrap:wrap}.footer-note{text-align:left}.quote-section{padding:90px 20px}
+}
+
+
+/* ===== PREMIUM DATABASE UPDATE ===== */
+.database-note{font:700 9px Inter;letter-spacing:1.5px;color:#6e727b}
+.player-intro{display:flex;justify-content:space-between;align-items:end;border:1px solid var(--line);background:linear-gradient(110deg,#15171c,#0e1014);padding:25px 28px;margin:-10px 0 22px;position:relative;overflow:hidden}
+.player-intro:after{content:"90";position:absolute;right:20px;top:-35px;font:900 130px "Barlow Condensed";color:#ffffff04}
+.player-intro strong{font:800 28px "Barlow Condensed";display:block}.player-intro span{font:700 7px Inter;letter-spacing:1.6px;color:var(--accent)}
+.player-intro p{max-width:450px;color:#777b84;font-size:10px;line-height:1.7;position:relative;z-index:1}
+.player-directory-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.premium-player{min-height:430px;padding:16px;background:linear-gradient(160deg,#171a20,#101216);transition:transform .3s,border-color .3s,box-shadow .3s}
+.premium-player:hover{transform:translateY(-8px);border-color:#565a64;box-shadow:0 25px 60px #0008}
+.player-top{display:flex;justify-content:space-between;align-items:center;color:#777b84;font:700 7px Inter;letter-spacing:1.2px}
+.player-top b{font:800 24px "Barlow Condensed";color:#4d5159}
+.player-photo{height:245px;margin:12px -4px 15px;background:radial-gradient(circle at 50% 20%,#353943,#13151a 67%);position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+.player-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,#0b0c0f 100%);z-index:1}
+.player-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;position:relative;z-index:0;transition:transform .5s;filter:saturate(.85) contrast(1.05)}
+.premium-player:hover .player-photo img{transform:scale(1.05)}
+.photo-fallback{position:absolute;z-index:0;font:900 90px "Barlow Condensed";color:#ffffff0b;bottom:20px}
+.premium-player .player-info{position:relative;z-index:2;margin-top:-55px;padding:0 4px}
+.premium-player .player-info h3{font-size:31px;line-height:.82;text-shadow:0 4px 18px #000}
+.player-meta{display:flex;justify-content:space-between;margin-top:17px;padding-bottom:13px;border-bottom:1px solid var(--line);font:700 7px Inter;letter-spacing:1px;color:#777b84}
+.premium-player .player-stats{margin-top:12px;padding-top:0;border-top:0;gap:20px}.premium-player .player-stats b{font-size:23px}
+.premium-team-grid{grid-template-columns:repeat(5,1fr);gap:10px}
+.premium-team{min-height:285px;padding:20px}
+.premium-team .large-crest{width:72px;height:72px;border-radius:18px;margin:25px 0 60px;font-size:19px;letter-spacing:1px}
+.premium-team h3{font-size:27px}.premium-team p{font-size:6px}.premium-team .arrow{bottom:16px}
+.claret{background:#7b1534}.amber{background:#e6a51c;color:#18140b}.redblue{background:linear-gradient(90deg,#d71935 50%,#1761aa 50%)}.blackwhite{background:linear-gradient(90deg,#111 50%,#eee 50%);color:#111}.redwhite{background:linear-gradient(90deg,#d71935 50%,#eee 50%);color:#111}
+
+@media(max-width:1100px){
+ .player-directory-grid{grid-template-columns:repeat(3,1fr)}.premium-team-grid{grid-template-columns:repeat(4,1fr)}
+}
+@media(max-width:800px){
+ .player-directory-grid{grid-template-columns:repeat(2,1fr)}.premium-team-grid{grid-template-columns:repeat(3,1fr)}
+ .player-intro{display:block}.player-intro p{margin-top:15px}
+}
+@media(max-width:560px){
+ .player-directory-grid{grid-template-columns:1fr}.premium-team-grid{grid-template-columns:repeat(2,1fr)}
+ .premium-player{min-height:410px}.player-photo{height:230px}.database-note{display:none}
+}
+
+
+/* ===== GLOBAL FOOTBALL HUB ===== */
+.global-hub{position:relative;background:#08090b;border-top:1px solid #24272d;border-bottom:1px solid #24272d;overflow:hidden}
+.global-noise{position:absolute;inset:0;opacity:.18;background-image:radial-gradient(#fff 0.5px,transparent .5px);background-size:7px 7px}
+.global-inner{position:relative;z-index:1}
+.global-hero{min-height:330px;border:1px solid #30333a;background:linear-gradient(125deg,#181b21 0%,#0e1014 55%,#2a0d13 100%);padding:45px;display:flex;justify-content:space-between;align-items:center;overflow:hidden;position:relative}
+.global-hero:after{content:"WORLD";position:absolute;right:-10px;bottom:-50px;font:900 190px "Barlow Condensed";color:#ffffff04;letter-spacing:-8px}
+.live-pill{font:800 8px Inter;letter-spacing:1.8px;color:#b4b7bf}.live-pill i{width:7px;height:7px;background:#39c979;border-radius:50%;display:inline-block;margin-right:7px}
+.global-hero h3{font-size:72px;line-height:.78;margin:16px 0}.global-hero p{max-width:450px;color:#777b84;font-size:11px;line-height:1.8}
+.global-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;width:370px;position:relative;z-index:2}.global-stats div{background:#ffffff06;border:1px solid #ffffff0b;padding:24px}.global-stats b{font:900 40px "Barlow Condensed";display:block}.global-stats span{font:700 7px Inter;letter-spacing:1.5px;color:#777b84}
+.league-tabs{display:flex;gap:0;border:1px solid var(--line);border-top:0;overflow:auto}.league-tabs span{padding:17px 20px;font:800 8px Inter;letter-spacing:1.3px;color:#777b84;border-right:1px solid var(--line);white-space:nowrap}.league-tabs .active{background:var(--accent);color:white}
+.competition-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:9px;margin-top:22px}.competition-card{min-height:190px;padding:18px;background:#111318;border:1px solid #292c32;position:relative;transition:.3s;overflow:hidden}.competition-card:hover{transform:translateY(-5px);border-color:#555963}.competition-card:after{content:"";position:absolute;width:100px;height:100px;right:-35px;bottom:-35px;border-radius:50%;background:#ffffff03}
+.competition-card>span{font:700 7px Inter;letter-spacing:1.3px;color:#6e727b}.competition-card strong{display:block;font:900 30px "Barlow Condensed";line-height:.85;margin-top:38px}.competition-card small{position:absolute;bottom:18px;left:18px;font:700 6px Inter;letter-spacing:1px;color:#666a73}.comp-code{position:absolute;right:16px;top:16px;font:900 10px "Barlow Condensed";color:#3c4048}.featured-comp{background:linear-gradient(145deg,#271116,#111318);border-color:#55232b}.featured-comp strong{color:#fff}.ucl{background:linear-gradient(145deg,#101829,#101318)}
+.world-clubs,.global-fixtures{margin-top:38px}.mini-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font:800 9px Inter;letter-spacing:1.7px}.mini-head small{font-size:7px;color:#646870;letter-spacing:1.2px}.club-index{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.club-index span{padding:14px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font:600 10px Inter;color:#a2a5ad;transition:.2s}.club-index span:hover{background:#16191e;color:#fff;padding-left:19px}
+.global-fixture-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.gf{min-height:220px;border:1px solid var(--line);background:linear-gradient(150deg,#15181d,#0e1013);padding:21px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transition:.25s}.gf:hover{border-color:#555963;transform:translateY(-4px)}.gf small{font:700 6px Inter;letter-spacing:1.2px;color:#777b84;margin-bottom:25px}.gf b{font:800 22px "Barlow Condensed"}.gf span{font:900 8px Inter;color:var(--accent);margin:8px 0}.gf em{font:700 6px Inter;font-style:normal;letter-spacing:1.2px;color:#5f636b;margin-top:24px}.data-note{margin-top:13px;font-size:8px;color:#595d65;line-height:1.6}
+
+@media(max-width:1000px){
+ .competition-grid{grid-template-columns:repeat(3,1fr)}.global-hero{display:block}.global-stats{margin-top:35px;width:100%;max-width:500px}.global-fixture-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+ .global-hero{padding:28px}.global-hero h3{font-size:55px}.global-stats{grid-template-columns:1fr 1fr}.competition-grid{grid-template-columns:1fr 1fr}.club-index{grid-template-columns:repeat(2,1fr)}.global-fixture-grid{grid-template-columns:1fr}.mini-head{align-items:flex-start;gap:12px;flex-direction:column}
+}
+
+/* ===== INTERACTIVE LEAGUE / REGION CONTROLS ===== */
+.league-tabs a{padding:17px 20px;font:800 8px Inter;letter-spacing:1.3px;color:#777b84;border-right:1px solid var(--line);white-space:nowrap;display:block;transition:.2s}
+.league-tabs a:hover,.league-tabs a:focus{background:#202329;color:#fff}
+.league-tabs a:target{background:var(--accent);color:#fff}
+.region-panels{margin-top:10px}
+.region-panel{display:none;min-height:105px;border:1px solid var(--line);background:linear-gradient(120deg,#16191e,#0f1114);padding:25px 28px}
+.region-panel:target{display:block;animation:panelIn .25s ease}
+.region-panel span{font:800 8px Inter;letter-spacing:1.7px;color:#8a8e97}
+.region-panel b{display:block;font:900 30px "Barlow Condensed";margin:8px 0}
+.region-panel small{font-size:9px;color:#666a73}
+@keyframes panelIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+/* Make Europe the default view */
+.region-panel:first-child{display:block}
+.region-panel:target ~ .region-panel:first-child{display:none}
+.real-news{background:linear-gradient(145deg,#211317,#121418);border-color:#5b252d}
+.real-news .news-tag{color:var(--accent)}
+.real-news h3{font-size:27px}
+.real-news a{color:#d9dbe0}
+.news-grid{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1000px){.news-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.news-grid{grid-template-columns:1fr}.league-tabs{overflow-x:auto}.region-panel b{font-size:24px}}
+
+/* Modern browsers: keep the selected tab visually active */
+.region-panels:has(#england:target) ~ * {}
+body:has(#england:target) .league-tabs a[href="#england"],
+body:has(#spain:target) .league-tabs a[href="#spain"],
+body:has(#italy:target) .league-tabs a[href="#italy"],
+body:has(#germany:target) .league-tabs a[href="#germany"],
+body:has(#france:target) .league-tabs a[href="#france"],
+body:has(#americas:target) .league-tabs a[href="#americas"],
+body:has(#asia:target) .league-tabs a[href="#asia"],
+body:has(#europe:target) .league-tabs a[href="#europe"]{background:var(--accent);color:#fff}
+body:has(#england:target) #europe,
+body:has(#spain:target) #europe,
+body:has(#italy:target) #europe,
+body:has(#germany:target) #europe,
+body:has(#france:target) #europe,
+body:has(#americas:target) #europe,
+body:has(#asia:target) #europe{display:none}
+
+/* ===== CLICKABLE CLUB PROFILES ===== */
+.club-link{display:block;color:inherit}
+.club-link:hover{color:inherit}
+.club-link .arrow{transition:.2s}
+.club-link:hover .arrow{color:var(--accent);transform:translate(3px,-3px)}
+.club-profile{display:none;max-width:1400px;margin:0 auto 40px;border:1px solid #3a3e47;background:linear-gradient(145deg,#171a20,#0d0f12);box-shadow:0 35px 100px #0009;padding:28px;scroll-margin-top:100px}
+.club-profile:target{display:block;animation:profileIn .3s ease}
+@keyframes profileIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.club-profile-head{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:22px}
+.club-profile-head span{font:700 7px Inter;letter-spacing:1.5px;color:#737780}
+.club-profile-head h3{font:900 48px "Barlow Condensed";line-height:.8;margin-top:8px}
+.club-profile-head a{font:800 8px Inter;letter-spacing:1.4px;color:#8b8f98}
+.coach-box{display:flex;align-items:center;gap:18px;border:1px solid var(--line);padding:18px;background:#111318;margin-bottom:22px}
+.coach-avatar{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:var(--accent);font:900 24px "Barlow Condensed"}
+.coach-box small,.coach-box span{display:block;font:700 7px Inter;letter-spacing:1.3px;color:#777b84}
+.coach-box b{display:block;font:900 30px "Barlow Condensed";margin:3px 0}
+.squad-box{border:1px solid var(--line);padding:20px}
+.squad-box ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+.squad-box li{padding:13px 8px;border-bottom:1px solid var(--line);font-size:10px;color:#c1c3c9;display:flex;gap:12px}
+.squad-box li span{font:700 8px "Barlow Condensed";color:#686c74}
+.player-photo img{display:block;object-fit:cover}
+.player-photo .photo-fallback{z-index:0}
+.player-photo img:not([src]),.player-photo img[src=""]{display:none}
+@media(max-width:700px){
+ .club-profile{padding:18px}.club-profile-head h3{font-size:38px}.squad-box ul{grid-template-columns:1fr 1fr}.coach-box b{font-size:25px}
+}
+@media(max-width:450px){.squad-box ul{grid-template-columns:1fr}}
+
+/* Multi-page / JavaScript enhancements */
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;max-width:1280px;margin:auto;padding:0 24px}.navbar .nav-inner nav{display:flex;gap:8px}.navbar nav a.active{color:var(--text);background:rgba(255,255,255,.08)}.menu-toggle{display:none;background:none;border:1px solid var(--line);color:var(--text);font-size:22px;padding:6px 10px;border-radius:8px}.site-footer{border-top:1px solid var(--line);padding:28px 5%;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:12px}.site-footer strong{display:block;color:var(--text);font-size:20px;letter-spacing:2px}.site-footer span{display:block;margin-top:4px}.page-hero{padding:110px 5% 55px;background:radial-gradient(circle at 80% 20%,rgba(255,60,60,.12),transparent 32%),linear-gradient(180deg,#111 0%,var(--bg) 100%)}.page-hero h1{font-size:clamp(54px,9vw,110px);line-height:.88;margin:8px 0 20px}.page-hero h1 span{color:var(--accent)}.page-hero p:last-child{max-width:650px;color:var(--muted);font-size:15px}.eyebrow{font-size:11px;letter-spacing:2px;color:var(--accent);font-weight:800}.home-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px}.section-copy{color:var(--muted);max-width:650px;line-height:1.8}.quick-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.quick-links a{border:1px solid var(--line);padding:12px 16px;color:var(--text);border-radius:6px}.home-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.home-stat-grid div{border:1px solid var(--line);padding:24px;background:rgba(255,255,255,.025)}.home-stat-grid b{display:block;font-size:34px}.home-stat-grid span{color:var(--muted);font-size:12px}.filter-row,.player-tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.filter-btn{border:1px solid var(--line);background:transparent;color:var(--muted);padding:8px 12px;border-radius:999px;cursor:pointer}.filter-btn.active{background:var(--accent);border-color:var(--accent);color:white}.player-tools input{background:#101010;border:1px solid var(--line);color:var(--text);padding:11px 14px;border-radius:6px;min-width:240px}.club-profile.active-profile{display:block}.empty-state{padding:40px;border:1px dashed var(--line);color:var(--muted)}
+@media(max-width:760px){.menu-toggle{display:block}.navbar .nav-inner nav{display:none;position:absolute;top:68px;left:0;right:0;background:#101010;border-bottom:1px solid var(--line);padding:12px 20px;flex-direction:column}.navbar .nav-inner nav.open{display:flex}.home-grid{grid-template-columns:1fr}.site-footer{flex-direction:column}.page-hero{padding-top:85px}.player-tools input{width:100%;min-width:0}}
+
+
+/* ===== THE 90 PREMIUM UI PASS ===== */
+:root{--accent:#ef233c;--accent2:#ff4d5d;--nav-bg:rgba(10,11,14,.78)}
+body{background:radial-gradient(circle at 50% -10%,rgba(239,35,60,.055),transparent 34%),var(--bg)}
+.navbar{height:84px;padding:0;top:12px;margin:0 auto;width:min(1380px,94%);border:1px solid rgba(255,255,255,.09);border-radius:16px;background:var(--nav-bg);box-shadow:0 18px 55px rgba(0,0,0,.42),inset 0 1px rgba(255,255,255,.055);backdrop-filter:blur(22px) saturate(140%);-webkit-backdrop-filter:blur(22px) saturate(140%)}
+.navbar:before{content:"";position:absolute;left:18%;right:18%;bottom:-1px;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.75}
+.nav-inner{width:100%;max-width:none;height:100%;padding:0 18px 0 20px}
+.brand{position:relative;min-width:150px;font-size:25px;letter-spacing:1.5px;font-weight:800}
+.brand:before{content:"";width:5px;height:24px;background:var(--accent);display:block;transform:skew(-12deg);box-shadow:0 0 16px rgba(239,35,60,.45)}
+.brand:after{content:"LIVE";position:absolute;left:49px;top:-13px;font:800 7px Inter;letter-spacing:1.7px;color:#777b84}
+.brand span{color:var(--accent);text-shadow:0 0 18px rgba(239,35,60,.28)}
+.navbar .nav-inner nav{height:100%;align-items:center;gap:4px}
+.navbar nav a{position:relative;padding:11px 14px;border-radius:9px;color:#8f939c;font-size:9px;letter-spacing:1.5px;transition:background .2s,color .2s,transform .2s}
+.navbar nav a:after{content:"";position:absolute;left:14px;right:14px;bottom:5px;height:2px;border-radius:10px;background:var(--accent);transform:scaleX(0);transition:.2s;box-shadow:0 0 10px rgba(239,35,60,.45)}
+.navbar nav a:hover{color:#fff;background:rgba(255,255,255,.055);transform:translateY(-1px)}
+.navbar nav a.active{color:#fff;background:linear-gradient(180deg,rgba(255,255,255,.095),rgba(255,255,255,.035));box-shadow:inset 0 0 0 1px rgba(255,255,255,.065)}
+.navbar nav a.active:after{transform:scaleX(1)}
+.menu-toggle{border-color:rgba(255,255,255,.13);background:rgba(255,255,255,.045);border-radius:10px}
+.page-hero{padding-top:145px;position:relative;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.05)}
+.page-hero:after{content:"90";position:absolute;right:4%;bottom:-70px;font:900 270px "Barlow Condensed";line-height:1;color:#fff03;pointer-events:none}
+.quick-links a,.filter-btn,.player-tools input{border-color:rgba(255,255,255,.09);background:rgba(255,255,255,.025);transition:.2s}
+.quick-links a:hover,.filter-btn:hover{border-color:rgba(239,35,60,.55);background:rgba(239,35,60,.08);transform:translateY(-2px)}
+.player-tools input:focus{outline:none;border-color:rgba(239,35,60,.65);box-shadow:0 0 0 3px rgba(239,35,60,.09)}
+.premium-player{border-color:rgba(255,255,255,.075);border-radius:12px;background:linear-gradient(160deg,rgba(28,31,38,.98),rgba(12,14,18,.98));box-shadow:0 18px 45px rgba(0,0,0,.16)}
+.premium-player:hover{border-color:rgba(239,35,60,.42);box-shadow:0 28px 70px rgba(0,0,0,.38)}
+.player-photo{border-radius:8px;background:radial-gradient(circle at 50% 20%,#3b404b,#111318 67%);border:1px solid rgba(255,255,255,.06)}
+.player-photo img{z-index:0;opacity:1;transition:transform .45s,opacity .2s}
+.player-photo img.broken{opacity:0}
+.player-photo .photo-fallback{position:absolute;inset:0;display:grid;place-items:center;font:900 52px "Barlow Condensed";letter-spacing:1px;color:#737985;background:radial-gradient(circle at 50% 30%,#343944,#111318 68%);z-index:0}
+.player-photo .photo-fallback:after{content:"PLAYER";position:absolute;bottom:16px;font:700 7px Inter;letter-spacing:2px;color:#555a64}
+.team-card,.matchweek,.table-panel,.form-panel,.news-card,.global-hero,.competition-card,.gf,.club-profile{border-radius:12px;box-shadow:0 15px 45px rgba(0,0,0,.12)}
+.team-card{border-color:rgba(255,255,255,.075)}
+.team-card:hover{border-color:rgba(239,35,60,.38);box-shadow:0 25px 65px rgba(0,0,0,.32)}
+footer,.site-footer{background:linear-gradient(180deg,#090a0d,#060709)}
+@media(max-width:760px){
+ .navbar{top:8px;width:calc(100% - 16px);height:68px;border-radius:13px}
+ .nav-inner{padding:0 12px 0 14px}.brand{font-size:22px;min-width:auto}.brand:before{height:20px}.brand:after{display:none}
+ .navbar .nav-inner nav{top:76px;left:0;right:0;padding:10px;background:rgba(10,11,14,.96);border:1px solid rgba(255,255,255,.09);border-radius:12px;box-shadow:0 20px 50px rgba(0,0,0,.5);backdrop-filter:blur(20px)}
+ .navbar nav a{padding:13px 14px}.navbar nav a:after{display:none}.page-hero{padding-top:105px}
+}
+
+/* Route-first page structure */
+body { min-height: 100vh; }
+main { min-height: calc(100vh - 150px); }
+.page-hero { padding-bottom: 34px; }
+.story-page { max-width: 900px; }
+.story-meta { font-size: 12px; letter-spacing: .14em; color: var(--accent); font-weight: 800; margin-bottom: 22px; }
+.story-body { max-width: 760px; }
+.story-body p { font-size: 17px; line-height: 1.85; color: var(--muted); margin: 0 0 22px; }
+.primary-btn, .ghost-btn { text-decoration: none; }
+@media (max-width: 700px) {
+  .story-body p { font-size: 15px; }
+}
+
+/* ===== PRO FOOTBALL INFORMATION LAYER ===== */
+.pro-dashboard{padding-top:0}.dashboard-grid{display:grid;grid-template-columns:1.7fr .7fr;gap:14px}.dashboard-main,.dashboard-side{border:1px solid var(--line);background:linear-gradient(145deg,#15181d,#0d0f12);padding:24px}.dashboard-side{display:flex;flex-direction:column;justify-content:center}.dashboard-side h3{font:900 32px "Barlow Condensed";line-height:.9;margin:8px 0 12px}.dashboard-side h3 em{color:var(--accent);font-style:normal}.dashboard-side p:not(.eyebrow){color:var(--muted);font-size:11px;line-height:1.7}.board-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.board-card{border:1px solid var(--line);padding:18px;color:var(--text);background:rgba(255,255,255,.025);transition:.2s}.board-card:hover{transform:translateY(-3px);border-color:#555963;background:rgba(255,255,255,.045)}.board-card span,.board-card small{display:block;color:#737780;font:700 7px Inter;letter-spacing:1.3px}.board-card b{display:block;font:900 27px "Barlow Condensed";margin:10px 0 2px}.board-card strong{font:800 13px Inter;color:var(--accent)}.board-card small{margin-top:9px;font-size:7px;color:#9b9ea5;letter-spacing:.8px}.text-link{margin-top:16px;color:#fff;font:800 8px Inter;letter-spacing:1.3px}.data-source,.source-strip{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:0 0 16px;padding:10px 12px;border:1px solid var(--line);background:#0d0f12}.data-source span,.source-strip span{font:800 7px Inter;letter-spacing:1.4px;color:var(--accent)}.data-source a,.source-strip a{font-size:9px;color:#b8bbc2}.source-strip{margin-top:14px;margin-bottom:0}.ucl-week{margin-top:10px}.table-panel{min-width:0}.table-row span:first-child{min-width:0;flex:1}.table-row{grid-template-columns:minmax(190px,1fr) 50px 50px 65px 55px}.table-dot.gold{background:#d9b14c}.table-dot.black{background:#333}.table-dot.claret{background:#7f1d32}.table-dot.navy{background:#1d3557}.table-dot.blue{background:#2563eb}.table-dot.sky{background:#38bdf8}.table-dot.red{background:#ef233c}.table-dot.white{background:#ddd}
+@media(max-width:900px){.dashboard-grid{grid-template-columns:1fr}.board-cards{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.board-cards{grid-template-columns:1fr}.table-row{grid-template-columns:minmax(150px,1fr) 35px 35px 50px 45px;font-size:8px}.data-source,.source-strip{align-items:flex-start;flex-direction:column;gap:7px}}
+
+/* Player profile */
+.clickable-player{cursor:pointer}.clickable-player:focus{outline:2px solid var(--accent);outline-offset:3px}.profile-shell{max-width:1200px;margin:20px auto 40px;padding:0 5%}.player-profile-card{display:grid;grid-template-columns:360px 1fr;min-height:500px;border:1px solid var(--line);background:linear-gradient(145deg,#171a20,#0d0f12);overflow:hidden}.player-profile-media{position:relative;background:linear-gradient(160deg,#242832,#0b0d10);min-height:500px}.player-profile-media img{width:100%;height:100%;object-fit:cover;display:block}.profile-fallback{display:none;position:absolute;inset:0;place-items:center;font:900 100px "Barlow Condensed";color:#fff;background:radial-gradient(circle at 50% 35%,#3a3f49,#111318 70%)}.player-profile-copy{padding:55px}.player-profile-copy h2{font:900 clamp(60px,8vw,110px) "Barlow Condensed";line-height:.8;margin:12px 0 35px}.profile-meta{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:25px}.profile-meta div{padding:18px;border-right:1px solid var(--line)}.profile-meta div:last-child{border-right:0}.profile-meta small{display:block;color:#6f737c;font:700 7px Inter;letter-spacing:1.3px}.profile-meta b{display:block;margin-top:7px;font:800 14px Inter}.player-profile-copy p{max-width:600px;color:var(--muted);line-height:1.8;font-size:12px}.profile-actions{max-width:1200px;margin:0 auto 60px;padding:0 5%}.profile-loading{padding:70px;border:1px dashed var(--line);color:var(--muted)}
+@media(max-width:800px){.player-profile-card{grid-template-columns:1fr}.player-profile-media{min-height:380px}.player-profile-copy{padding:30px}.profile-meta{grid-template-columns:1fr}.profile-meta div{border-right:0;border-bottom:1px solid var(--line)}.profile-meta div:last-child{border-bottom:0}}
